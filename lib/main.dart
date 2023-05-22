@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'view/home_screen.dart';
+import 'utils/color_generator.dart';
+import 'view/test_app_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const TestApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class TestApp extends StatelessWidget {
+  const TestApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Task One',
-      home: HomeScreen(),
+      home: TestScreen(colorGenerator: ColorGenerator()),
     );
   }
 }
